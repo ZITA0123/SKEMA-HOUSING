@@ -1,0 +1,117 @@
+/* ============================================
+   SKEMA HOUSING - Reset CSS
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--skema-noir);
+  background-color: var(--skema-blanc);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+}
+
+p {
+  line-height: var(--lh-relaxed);
+}
+
+/* Accessibilité - skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--skema-rouge-fonce);
+  color: var(--skema-blanc);
+  padding: var(--space-sm) var(--space-md);
+  z-index: var(--z-tooltip);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus visible pour accessibilité */
+:focus-visible {
+  outline: 3px solid var(--skema-rouge-fonce);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Sélection texte */
+::selection {
+  background: var(--skema-rouge-fonce);
+  color: var(--skema-blanc);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--skema-rouge-fonce);
+}

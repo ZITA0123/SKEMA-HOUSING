@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon dossier - Résidences privées vérifiées - SKEMA Housing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-mark">SH</div>
+        <div class="header-logo-text">
+          <strong>SKEMA Housing</strong>
+          <span>At Home Worldwide</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="index.html" class="main-nav-link">Accueil</a></li>
+          <li><a href="residences.html" class="main-nav-link active">Logements</a></li>
+          <li><a href="familles.html" class="main-nav-link">Familles d'accueil</a></li>
+          <li><a href="temoignages.html" class="main-nav-link">Témoignages</a></li>
+          <li><a href="equipe.html" class="main-nav-link">Notre équipe</a></li>
+          <li><a href="faq.html" class="main-nav-link">FAQ</a></li>
+        </ul>
+        <div class="user-avatar-header" id="user-avatar-header"></div>
+        <button class="menu-toggle"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Accueil</a>
+        <span class="separator">›</span>
+        <a href="residences.html">Logements</a>
+        <span class="separator">›</span>
+        <span class="current">Mon dossier</span>
+      </div>
+    </div>
+
+    <section class="product-hero">
+      <div class="container">
+        <div class="product-hero-inner">
+          <div class="product-hero-content">
+            <h1 class="product-hero-title">
+              <span class="product-hero-title-accent">Résidences privées</span>
+              <span>vérifiées</span>
+            </h1>
+            <p>
+              Constituez votre dossier en quelques minutes. Nous vous proposerons les meilleures résidences partenaires selon vos critères.
+            </p>
+          </div>
+          <div class="product-hero-image">
+            <img src="assets/images/campus/campus-grand-paris.jpg" alt="Campus SKEMA Grand Paris">
+            <div class="product-hero-image-label">
+              <div class="product-hero-image-label-eyebrow">Votre campus</div>
+              <div class="product-hero-image-label-title">Campus Grand Paris</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-selection">
+      <div class="container">
+        <div class="selection-intro">
+          <span class="selection-step-indicator">Étape 1 / 2</span>
+          <h2>Choisissez votre pays</h2>
+          <p>Sélectionnez d'abord le pays de votre campus SKEMA, puis le campus exact où vous souhaitez étudier.</p>
+        </div>
+
+        <div class="country-row country-row-1" id="country-row-1"></div>
+        <div class="country-row country-row-2" id="country-row-2"></div>
+      </div>
+    </section>
+
+    <section class="section section-selection" id="campus-section" style="display:none;background:var(--skema-beige-clair);">
+      <div class="container">
+        <div class="selection-intro">
+          <span class="selection-step-indicator">Étape 2 / 2</span>
+          <h2>Choisissez votre campus</h2>
+          <p>Pour cet exercice, seul le <strong>Campus Grand Paris (Suresnes)</strong> est disponible.</p>
+        </div>
+        <div class="country-row country-row-2" id="campus-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="form-section" style="display:none;background:var(--skema-beige-clair);padding-top:0;">
+      <div class="container">
+        <div class="form-container">
+
+          <h2 class="form-title">Complétez votre dossier</h2>
+          <p class="form-subtitle">Vos propositions personnalisées sous 48h</p>
+
+          <!-- BANDEAU PRÉ-REMPLI -->
+          <div class="form-prefilled-banner" id="form-prefilled-banner"></div>
+
+          <div class="form-progress">
+            <div class="form-progress-bar">
+              <div class="form-progress-fill" style="width: 0%;"></div>
+            </div>
+            <div class="form-steps">
+              <div class="form-step is-active" data-step="1">
+                <div class="form-step-circle"><span class="form-step-number">1</span></div>
+                <span class="form-step-label">Durée</span>
+              </div>
+              <div class="form-step" data-step="2">
+                <div class="form-step-circle"><span class="form-step-number">2</span></div>
+                <span class="form-step-label">Logement</span>
+              </div>
+              <div class="form-step" data-step="3">
+                <div class="form-step-circle"><span class="form-step-number">3</span></div>
+                <span class="form-step-label">Équipements</span>
+              </div>
+              <div class="form-step" data-step="4">
+                <div class="form-step-circle"><span class="form-step-number">4</span></div>
+                <span class="form-step-label">Récap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 1 : DURÉE -->
+          <div class="form-step-content is-active" data-step="1">
+            <h2 class="form-step-title">Durée de votre séjour</h2>
+            <p style="margin-bottom:var(--space-xl);color:var(--gray-700);font-size:var(--fs-md);">
+              Combien de temps souhaitez-vous être logé(e) ?
+            </p>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Durée souhaitée</label>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="radio" name="duration" value="1-3 mois" required>
+                  <img src="assets/icons/calendrier.png" alt="" class="choice-card-icon-img">
+                  <div class="choice-card-label">1 à 3 mois</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="duration" value="4-6 mois">
+                  <img src="assets/icons/calendrier.png" alt="" class="choice-card-icon-img">
+                  <div class="choice-card-label">4 à 6 mois</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="duration" value="6-9 mois">
+                  <img src="assets/icons/calendrier.png" alt="" class="choice-card-icon-img">
+                  <div class="choice-card-label">6 à 9 mois</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="duration" value="Année complète">
+                  <img src="assets/icons/calendrier.png" alt="" class="choice-card-icon-img">
+                  <div class="choice-card-label">Année complète</div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 2 : LOGEMENT -->
+          <div class="form-step-content" data-step="2">
+            <h2 class="form-step-title">Votre logement idéal</h2>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Temps de trajet maximum accepté pour aller au campus</label>
+              <p class="form-help" style="margin-bottom:var(--space-md);">
+                Le campus Grand Paris est à Suresnes (Tram T2). Choisissez votre zone de confort.
+              </p>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="radio" name="maxTransportTime" value="15" required>
+                  <div class="choice-card-label">15 min max</div>
+                  <div class="choice-card-sublabel">Suresnes / Puteaux / La Défense</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="maxTransportTime" value="30">
+                  <div class="choice-card-label">30 min max</div>
+                  <div class="choice-card-sublabel">+ Boulogne, Issy, Paris 16/17</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="maxTransportTime" value="45">
+                  <div class="choice-card-label">45 min max</div>
+                  <div class="choice-card-sublabel">+ Paris centre, Versailles</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="maxTransportTime" value="60">
+                  <div class="choice-card-label">1h max</div>
+                  <div class="choice-card-sublabel">+ Massy, Cergy</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="maxTransportTime" value="999">
+                  <div class="choice-card-label">Pas de préférence</div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Type de logement recherché</label>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="radio" name="housingType" value="Studio" required>
+                  <div class="choice-card-label">Studio</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="housingType" value="T1">
+                  <div class="choice-card-label">T1</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="housingType" value="Coliving">
+                  <div class="choice-card-label">Coliving</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="housingType" value="Résidence étudiante">
+                  <div class="choice-card-label">Résidence étudiante</div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="budget">Budget mensuel maximum</label>
+              <input type="range" id="budget" name="budget" class="form-range" min="500" max="1500" step="50" value="900">
+              <div class="range-display">
+                <span class="range-limits">500 €</span>
+                <span class="range-value" id="budget-value">900 €</span>
+                <span class="range-limits">1500 €</span>
+              </div>
+              <p class="form-help">Charges comprises (eau, électricité, wifi…)</p>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 3 : ÉQUIPEMENTS -->
+          <div class="form-step-content" data-step="3">
+            <h2 class="form-step-title">Équipements indispensables</h2>
+            <p style="margin-bottom:var(--space-xl);color:var(--gray-700);font-size:var(--fs-md);">
+              Sélectionnez les équipements importants pour vous.
+            </p>
+
+            <div class="form-group">
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="checkbox" name="features" value="Meublé">
+                  <div class="choice-card-label">Meublé</div>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="features" value="Wifi inclus">
+                  <div class="choice-card-label">Wifi inclus</div>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="features" value="Cuisine équipée">
+                  <div class="choice-card-label">Cuisine équipée</div>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="features" value="Laverie">
+                  <div class="choice-card-label">Laverie</div>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="features" value="Salle de sport">
+                  <div class="choice-card-label">Salle de sport</div>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="features" value="Coworking">
+                  <div class="choice-card-label">Coworking</div>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="features" value="Sécurité 24/7">
+                  <div class="choice-card-label">Sécurité 24/7</div>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="features" value="Parking">
+                  <div class="choice-card-label">Parking</div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="notes">Commentaires / besoins spécifiques</label>
+              <textarea id="notes" name="notes" class="form-textarea" placeholder="Indiquez ici toute information utile : besoins d'accessibilité, animal, situation particulière…"></textarea>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 4 : RÉCAP -->
+          <div class="form-step-content" data-step="4">
+            <h2 class="form-step-title">Récapitulatif de votre dossier</h2>
+
+            <div class="alert alert-success">
+              <span><strong>Presque terminé !</strong> Vérifiez vos informations puis envoyez votre dossier. Vous recevrez vos propositions sous 48h.</span>
+            </div>
+
+            <div class="form-recap">
+              <h3 class="form-recap-title">Vos informations</h3>
+              <ul class="form-recap-list"></ul>
+            </div>
+
+            <!-- SECTION PAIEMENT DES FRAIS DE DOSSIER -->
+            <div class="payment-section" id="payment-section" style="display:none;">
+              <div class="payment-section-header">
+                <div class="payment-section-icon">💳</div>
+                <div>
+                  <h3 class="payment-section-title">Régler les frais de dossier</h3>
+                  <p class="payment-section-subtitle">Paiement sécurisé requis avant l'envoi du dossier</p>
+                </div>
+              </div>
+
+              <div class="payment-amount-row">
+                <span class="payment-amount-label">Frais de dossier (résidence privée)</span>
+                <span class="payment-amount-value">150 €</span>
+              </div>
+
+              <button type="button" class="btn-payment" id="btn-payment">
+                <span class="btn-payment-icon">🔒</span>
+                <span>Payer 150 € — Frais de dossier</span>
+              </button>
+
+              <!-- Badge affiché APRÈS paiement -->
+              <div class="payment-paid-badge">
+                <span class="payment-paid-badge-icon">✓</span>
+                <span>Paiement validé</span>
+              </div>
+
+              <p class="payment-section-info">
+                <span class="payment-section-info-secure">🔒 Transaction sécurisée · Paiement unique</span><br>
+                Vous serez débité une seule fois au moment de la validation.
+              </p>
+            </div>
+
+            <div class="form-group" style="margin-top: 2rem;">
+              <label class="form-check">
+                <input type="checkbox" id="cgu" name="cgu" required>
+                <span class="form-check-label">
+                  J'accepte les <a href="#" style="color:var(--skema-rouge-fonce);text-decoration:underline;">conditions générales d'utilisation</a>
+                  et autorise SKEMA Housing à traiter mes données.
+                </span>
+              </label>
+            </div>
+
+            <!-- Helper sous le bouton "Envoyer" tant que paiement non fait -->
+            <p class="btn-submit-helper" id="btn-submit-helper">
+              ⚠️ Veuillez d'abord régler les frais de dossier ci-dessus pour activer l'envoi.
+            </p>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost btn-back">← Précédent</button>
+            <button type="button" class="btn btn-primary btn-next">Étape suivante →</button>
+            <button type="button" class="btn btn-primary btn-submit" style="display:none;">
+              Envoyer mon dossier
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== MODAL DE CONFIRMATION DE PAIEMENT ===== -->
+  <div class="modal-overlay" id="payment-modal-overlay">
+    <div class="modal-box">
+      <div class="modal-icon">💳</div>
+      <h2 class="modal-title">Confirmer le paiement ?</h2>
+      <p class="modal-text">
+        Vous êtes sur le point de régler les <strong>frais de dossier</strong> pour
+        votre demande de logement en résidence privée SKEMA.
+      </p>
+
+      <div class="modal-amount-box">
+        <span class="modal-amount-label" id="modal-amount-label">Frais de dossier</span>
+        <span class="modal-amount-value" id="modal-amount-value">150 €</span>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="modal-btn-cancel" id="modal-btn-cancel">Annuler</button>
+        <button type="button" class="modal-btn-confirm" id="modal-btn-confirm">Confirmer le paiement</button>
+      </div>
+
+      <p class="modal-security-note">🔒 Paiement sécurisé · Aucune carte bancaire requise pour cette démonstration</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0;">
+        <p class="footer-copyright">© 2025 SKEMA Housing — At Home Worldwide · 5 Quai Marcel Dassault, 92150 Suresnes</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/formulaire.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = window.SKEMA_DATA?.CURRENT_USER;
+      const avatarEl = document.getElementById('user-avatar-header');
+      if (user && avatarEl) {
+        avatarEl.innerHTML = `
+          <div class="user-avatar-circle" style="background:linear-gradient(135deg, ${user.avatarColor}, ${user.avatarColor}cc);">
+            ${user.initials}
+          </div>
+          <div class="user-avatar-header-info">
+            <span class="user-avatar-header-name">${user.firstname}</span>
+            <span class="user-avatar-header-program">${user.program} · ${user.year}</span>
+          </div>
+        `;
+      }
+
+      Formulaire.init('residence');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon dossier - Familles : Immersion culturelle - SKEMA Housing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-mark">SH</div>
+        <div class="header-logo-text">
+          <strong>SKEMA Housing</strong>
+          <span>At Home Worldwide</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="index.html" class="main-nav-link">Accueil</a></li>
+          <li><a href="residences.html" class="main-nav-link">Logements</a></li>
+          <li><a href="familles.html" class="main-nav-link active">Familles d'accueil</a></li>
+          <li><a href="temoignages.html" class="main-nav-link">Témoignages</a></li>
+          <li><a href="equipe.html" class="main-nav-link">Notre équipe</a></li>
+          <li><a href="faq.html" class="main-nav-link">FAQ</a></li>
+        </ul>
+        <div class="user-avatar-header" id="user-avatar-header"></div>
+        <button class="menu-toggle"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Accueil</a>
+        <span class="separator">›</span>
+        <a href="familles.html">Familles d'accueil</a>
+        <span class="separator">›</span>
+        <span class="current">Mon dossier</span>
+      </div>
+    </div>
+
+    <section class="product-hero">
+      <div class="container">
+        <div class="product-hero-inner">
+          <div class="product-hero-content">
+            <h1 class="product-hero-title">
+              <span>Familles :</span>
+              <span class="product-hero-title-accent">Immersion culturelle</span>
+            </h1>
+            <p>
+              Constituez votre dossier en quelques minutes. Notre équipe vous proposera 2 à 3 familles compatibles sous 48h.
+            </p>
+          </div>
+          <div class="product-hero-image">
+            <img src="assets/images/campus/campus-grand-paris.jpg" alt="Campus SKEMA Grand Paris">
+            <div class="product-hero-image-label">
+              <div class="product-hero-image-label-eyebrow">Votre campus</div>
+              <div class="product-hero-image-label-title">Campus Grand Paris</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-selection">
+      <div class="container">
+        <div class="selection-intro">
+          <span class="selection-step-indicator">Étape 1 / 2</span>
+          <h2>Choisissez votre pays</h2>
+          <p>Sélectionnez d'abord le pays de votre campus SKEMA, puis le campus exact où vous souhaitez étudier.</p>
+        </div>
+
+        <div class="country-row country-row-1" id="country-row-1"></div>
+        <div class="country-row country-row-2" id="country-row-2"></div>
+      </div>
+    </section>
+
+    <section class="section section-selection" id="campus-section" style="display:none;background:var(--skema-beige-clair);">
+      <div class="container">
+        <div class="selection-intro">
+          <span class="selection-step-indicator">Étape 2 / 2</span>
+          <h2>Choisissez votre campus</h2>
+          <p>Pour cet exercice, seul le <strong>Campus Grand Paris (Suresnes)</strong> est disponible.</p>
+        </div>
+        <div class="country-row country-row-2" id="campus-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="form-section" style="display:none;background:var(--skema-beige-clair);padding-top:0;">
+      <div class="container">
+        <div class="form-container">
+
+          <h2 class="form-title">Complétez votre dossier</h2>
+          <p class="form-subtitle">Sélection personnalisée sous 48h</p>
+
+          <!-- BANDEAU PRÉ-REMPLI -->
+          <div class="form-prefilled-banner" id="form-prefilled-banner"></div>
+
+          <div class="form-progress">
+            <div class="form-progress-bar">
+              <div class="form-progress-fill" style="width: 0%;"></div>
+            </div>
+            <div class="form-steps">
+              <div class="form-step is-active" data-step="1">
+                <div class="form-step-circle"><span class="form-step-number">1</span></div>
+                <span class="form-step-label">Durée</span>
+              </div>
+              <div class="form-step" data-step="2">
+                <div class="form-step-circle"><span class="form-step-number">2</span></div>
+                <span class="form-step-label">Alimentation</span>
+              </div>
+              <div class="form-step" data-step="3">
+                <div class="form-step-circle"><span class="form-step-number">3</span></div>
+                <span class="form-step-label">Habitudes</span>
+              </div>
+              <div class="form-step" data-step="4">
+                <div class="form-step-circle"><span class="form-step-number">4</span></div>
+                <span class="form-step-label">Activités</span>
+              </div>
+              <div class="form-step" data-step="5">
+                <div class="form-step-circle"><span class="form-step-number">5</span></div>
+                <span class="form-step-label">Vidéo</span>
+              </div>
+              <div class="form-step" data-step="6">
+                <div class="form-step-circle"><span class="form-step-number">6</span></div>
+                <span class="form-step-label">Récap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 1 : DURÉE + LANGUES -->
+          <div class="form-step-content is-active" data-step="1">
+            <h2 class="form-step-title">Durée &amp; langues</h2>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Durée du séjour</label>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="radio" name="duration" value="1-3 mois" required>
+                  <img src="assets/icons/calendrier.png" alt="" class="choice-card-icon-img">
+                  <div class="choice-card-label">1 à 3 mois</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="duration" value="4-6 mois">
+                  <img src="assets/icons/calendrier.png" alt="" class="choice-card-icon-img">
+                  <div class="choice-card-label">4 à 6 mois</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="duration" value="6-9 mois">
+                  <img src="assets/icons/calendrier.png" alt="" class="choice-card-icon-img">
+                  <div class="choice-card-label">6 à 9 mois</div>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="duration" value="Année complète">
+                  <img src="assets/icons/calendrier.png" alt="" class="choice-card-icon-img">
+                  <div class="choice-card-label">Année complète</div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Langues parlées</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="checkbox" name="languages" value="Français"><div class="choice-card-label">Français</div></label>
+                <label class="choice-card"><input type="checkbox" name="languages" value="Anglais"><div class="choice-card-label">Anglais</div></label>
+                <label class="choice-card"><input type="checkbox" name="languages" value="Espagnol"><div class="choice-card-label">Espagnol</div></label>
+                <label class="choice-card"><input type="checkbox" name="languages" value="Mandarin"><div class="choice-card-label">Mandarin</div></label>
+                <label class="choice-card"><input type="checkbox" name="languages" value="Arabe"><div class="choice-card-label">Arabe</div></label>
+                <label class="choice-card"><input type="checkbox" name="languages" value="Allemand"><div class="choice-card-label">Allemand</div></label>
+                <label class="choice-card"><input type="checkbox" name="languages" value="Portugais"><div class="choice-card-label">Portugais</div></label>
+                <label class="choice-card"><input type="checkbox" name="languages" value="Autre"><div class="choice-card-label">Autre</div></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="frenchLevel">Niveau de français</label>
+              <select id="frenchLevel" name="frenchLevel" class="form-select">
+                <option value="">Sélectionnez</option>
+                <option value="Débutant (A1)">Débutant (A1)</option>
+                <option value="Intermédiaire (A2-B1)">Intermédiaire (A2-B1)</option>
+                <option value="Avancé (B2-C1)">Avancé (B2-C1)</option>
+                <option value="Bilingue (C2)">Bilingue (C2)</option>
+                <option value="Langue maternelle">Langue maternelle</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 2 : ALIMENTATION -->
+          <div class="form-step-content" data-step="2">
+            <h2 class="form-step-title">Vos préférences alimentaires</h2>
+
+            <div class="alert alert-info">
+              <span><strong>Important :</strong> ces informations sont essentielles pour vous proposer une famille adaptée.</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Votre régime alimentaire</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="radio" name="diet" value="Omnivore" required><div class="choice-card-label">Omnivore</div></label>
+                <label class="choice-card"><input type="radio" name="diet" value="Végétarien"><div class="choice-card-label">Végétarien</div></label>
+                <label class="choice-card"><input type="radio" name="diet" value="Végan"><div class="choice-card-label">Végan</div></label>
+                <label class="choice-card"><input type="radio" name="diet" value="Halal"><div class="choice-card-label">Halal</div></label>
+                <label class="choice-card"><input type="radio" name="diet" value="Casher"><div class="choice-card-label">Casher</div></label>
+                <label class="choice-card"><input type="radio" name="diet" value="Sans gluten"><div class="choice-card-label">Sans gluten</div></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Allergies alimentaires</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="checkbox" name="allergiesList" value="Arachides"><div class="choice-card-label">Arachides</div></label>
+                <label class="choice-card"><input type="checkbox" name="allergiesList" value="Fruits à coque"><div class="choice-card-label">Fruits à coque</div></label>
+                <label class="choice-card"><input type="checkbox" name="allergiesList" value="Lactose"><div class="choice-card-label">Lactose</div></label>
+                <label class="choice-card"><input type="checkbox" name="allergiesList" value="Œufs"><div class="choice-card-label">Œufs</div></label>
+                <label class="choice-card"><input type="checkbox" name="allergiesList" value="Fruits de mer"><div class="choice-card-label">Fruits de mer</div></label>
+                <label class="choice-card"><input type="checkbox" name="allergiesList" value="Gluten"><div class="choice-card-label">Gluten</div></label>
+                <label class="choice-card"><input type="checkbox" name="allergiesList" value="Soja"><div class="choice-card-label">Soja</div></label>
+                <label class="choice-card"><input type="checkbox" name="allergiesList" value="Aucune"><div class="choice-card-label">Aucune</div></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="foodNotes">Autres préférences alimentaires</label>
+              <textarea id="foodNotes" name="foodNotes" class="form-textarea" placeholder="Plats préférés, plats à éviter…"></textarea>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 3 : HABITUDES -->
+          <div class="form-step-content" data-step="3">
+            <h2 class="form-step-title">Vos habitudes de vie</h2>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Fumez-vous ?</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="radio" name="smoking" value="Non" required><div class="choice-card-label">Non, jamais</div></label>
+                <label class="choice-card"><input type="radio" name="smoking" value="Occasionnel"><div class="choice-card-label">Occasionnel</div></label>
+                <label class="choice-card"><input type="radio" name="smoking" value="Régulier extérieur"><div class="choice-card-label">Régulier (extérieur)</div></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Animaux acceptés ?</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="radio" name="pets" value="Tous animaux OK" required><div class="choice-card-label">Tous animaux OK</div></label>
+                <label class="choice-card"><input type="radio" name="pets" value="Chats uniquement"><div class="choice-card-label">Chats uniquement</div></label>
+                <label class="choice-card"><input type="radio" name="pets" value="Chiens uniquement"><div class="choice-card-label">Chiens uniquement</div></label>
+                <label class="choice-card"><input type="radio" name="pets" value="Pas d'animaux"><div class="choice-card-label">Pas d'animaux</div></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Sociabilité</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="radio" name="sociability" value="Très sociable" required><div class="choice-card-label">Très sociable</div></label>
+                <label class="choice-card"><input type="radio" name="sociability" value="Équilibré"><div class="choice-card-label">Équilibré</div></label>
+                <label class="choice-card"><input type="radio" name="sociability" value="Plutôt réservé"><div class="choice-card-label">Plutôt réservé</div></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label form-label-required">Horaires habituels</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="radio" name="schedule" value="Matinal" required><div class="choice-card-label">Matinal</div></label>
+                <label class="choice-card"><input type="radio" name="schedule" value="Standard"><div class="choice-card-label">Standard</div></label>
+                <label class="choice-card"><input type="radio" name="schedule" value="Nocturne"><div class="choice-card-label">Nocturne</div></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 4 : ACTIVITÉS -->
+          <div class="form-step-content" data-step="4">
+            <h2 class="form-step-title">Type de famille &amp; activités</h2>
+
+            <div class="form-group">
+              <label class="form-label">Type de famille souhaitée</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="checkbox" name="familyType" value="Avec enfants"><div class="choice-card-label">Avec enfants</div></label>
+                <label class="choice-card"><input type="checkbox" name="familyType" value="Couple"><div class="choice-card-label">Couple sans enfant</div></label>
+                <label class="choice-card"><input type="checkbox" name="familyType" value="Retraités"><div class="choice-card-label">Retraités</div></label>
+                <label class="choice-card"><input type="checkbox" name="familyType" value="Indifférent"><div class="choice-card-label">Pas de préférence</div></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Activités souhaitées</label>
+              <div class="choice-grid">
+                <label class="choice-card"><input type="checkbox" name="activities" value="Repas en commun"><div class="choice-card-label">Repas en commun</div></label>
+                <label class="choice-card"><input type="checkbox" name="activities" value="Sorties culturelles"><div class="choice-card-label">Sorties culturelles</div></label>
+                <label class="choice-card"><input type="checkbox" name="activities" value="Échanges linguistiques"><div class="choice-card-label">Échanges linguistiques</div></label>
+                <label class="choice-card"><input type="checkbox" name="activities" value="Vie indépendante"><div class="choice-card-label">Vie indépendante</div></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 5 : VIDÉO DE PRÉSENTATION -->
+          <div class="form-step-content" data-step="5">
+            <h2 class="form-step-title">Votre vidéo de présentation</h2>
+
+            <!-- Intro engageante -->
+            <div class="video-intro">
+              <div class="video-intro-icon">🎥</div>
+              <div class="video-intro-content">
+                <h3>Présentez-vous en quelques mots</h3>
+                <p>
+                  Une courte vidéo permettra aux familles d'accueil de vous découvrir avant de vous accueillir.
+                  C'est <strong>l'occasion de créer un vrai lien humain</strong> et d'augmenter vos chances de match parfait.
+                </p>
+              </div>
+            </div>
+
+            <!-- Suggestions de sujets -->
+            <div class="video-suggestions">
+              <p class="video-suggestions-title">Idées de sujets à aborder :</p>
+              <ul class="video-suggestions-list">
+                <li>Votre prénom et votre programme à SKEMA</li>
+                <li>Votre pays d'origine et votre culture</li>
+                <li>Vos passions et centres d'intérêt</li>
+                <li>Pourquoi vous choisissez une famille d'accueil</li>
+                <li>Vos attentes pour ce séjour</li>
+                <li>Une anecdote ou un trait de personnalité</li>
+              </ul>
+            </div>
+
+            <!-- Zone d'upload -->
+            <div class="form-group">
+              <div class="video-upload-zone" id="video-upload-zone">
+                <input type="file" name="presentationVideo" id="presentationVideo" accept="video/mp4,video/quicktime,video/webm,video/mov">
+                <div class="video-upload-icon">📹</div>
+                <p class="video-upload-title">Glissez votre vidéo ici</p>
+                <p class="video-upload-text">ou <strong>cliquez pour parcourir</strong> vos fichiers</p>
+                <div class="video-upload-meta">
+                  <span class="video-upload-meta-item">Durée recommandée : 60-90 secondes</span>
+                  <span class="video-upload-meta-item">Formats : MP4, MOV, WEBM</span>
+                  <span class="video-upload-meta-item">Taille max : 100 Mo</span>
+                </div>
+              </div>
+
+              <!-- Message succès -->
+              <div class="video-success" id="video-success">
+                ✓ Vidéo chargée avec succès ! Vous pouvez la visualiser ci-dessous.
+              </div>
+
+              <!-- Aperçu vidéo -->
+              <div class="video-preview" id="video-preview">
+                <video class="video-preview-player" id="video-preview-player" controls></video>
+                <div class="video-preview-info">
+                  <div class="video-preview-meta">
+                    <span class="video-preview-filename" id="video-preview-filename">video.mp4</span>
+                    <span class="video-preview-size" id="video-preview-size">0 Mo</span>
+                  </div>
+                  <div class="video-preview-actions">
+                    <button type="button" class="video-preview-btn video-preview-btn-replace" id="video-btn-replace">
+                      Remplacer
+                    </button>
+                    <button type="button" class="video-preview-btn video-preview-btn-delete" id="video-btn-delete">
+                      Supprimer
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bandeau confidentialité -->
+              <div class="video-privacy">
+                <span class="video-privacy-icon">🔒</span>
+                <span>
+                  <strong>Confidentialité :</strong> votre vidéo sera visible uniquement par les
+                  2 à 3 familles d'accueil présélectionnées pour votre profil. Elle ne sera jamais
+                  diffusée publiquement.
+                </span>
+              </div>
+
+              <p class="video-skip-note">
+                Cette étape est facultative mais fortement recommandée — elle augmente vos chances d'être choisi(e) par les familles.
+              </p>
+            </div>
+          </div>
+
+          <!-- ÉTAPE 6 : RÉCAP -->
+          <div class="form-step-content" data-step="6">
+            <h2 class="form-step-title">Récapitulatif de votre dossier</h2>
+
+            <div class="alert alert-success">
+              <span><strong>Presque terminé !</strong> Vérifiez vos informations puis envoyez votre dossier.</span>
+            </div>
+
+            <div class="form-recap">
+              <h3 class="form-recap-title">Vos informations</h3>
+              <ul class="form-recap-list"></ul>
+            </div>
+
+            <!-- SECTION PAIEMENT DES FRAIS DE MISE EN RELATION -->
+            <div class="payment-section" id="payment-section" style="display:none;">
+              <div class="payment-section-header">
+                <div class="payment-section-icon">💳</div>
+                <div>
+                  <h3 class="payment-section-title">Régler les frais de mise en relation</h3>
+                  <p class="payment-section-subtitle">Paiement sécurisé requis avant l'envoi du dossier</p>
+                </div>
+              </div>
+
+              <div class="payment-amount-row">
+                <span class="payment-amount-label">Frais de mise en relation (famille d'accueil)</span>
+                <span class="payment-amount-value">80 €</span>
+              </div>
+
+              <button type="button" class="btn-payment" id="btn-payment">
+                <span class="btn-payment-icon">🔒</span>
+                <span>Payer 80 € — Frais de mise en relation</span>
+              </button>
+
+              <!-- Badge affiché APRÈS paiement -->
+              <div class="payment-paid-badge">
+                <span class="payment-paid-badge-icon">✓</span>
+                <span>Paiement validé</span>
+              </div>
+
+              <p class="payment-section-info">
+                <span class="payment-section-info-secure">🔒 Transaction sécurisée · Paiement unique</span><br>
+                Vous serez débité une seule fois au moment de la validation.
+              </p>
+            </div>
+
+            <div class="form-group" style="margin-top: 2rem;">
+              <label class="form-check">
+                <input type="checkbox" id="cgu" name="cgu" required>
+                <span class="form-check-label">
+                  J'accepte les <a href="#" style="color:var(--skema-rouge-fonce);text-decoration:underline;">conditions générales d'utilisation</a>
+                  et autorise SKEMA Housing à transmettre mes informations aux familles d'accueil.
+                </span>
+              </label>
+            </div>
+
+            <!-- Helper sous le bouton "Envoyer" tant que paiement non fait -->
+            <p class="btn-submit-helper" id="btn-submit-helper">
+              ⚠️ Veuillez d'abord régler les frais de mise en relation ci-dessus pour activer l'envoi.
+            </p>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost btn-back">← Précédent</button>
+            <button type="button" class="btn btn-primary btn-next">Étape suivante →</button>
+            <button type="button" class="btn btn-primary btn-submit" style="display:none;">
+              Envoyer mon dossier
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== MODAL DE CONFIRMATION DE PAIEMENT ===== -->
+  <div class="modal-overlay" id="payment-modal-overlay">
+    <div class="modal-box">
+      <div class="modal-icon">💳</div>
+      <h2 class="modal-title">Confirmer le paiement ?</h2>
+      <p class="modal-text">
+        Vous êtes sur le point de régler les <strong>frais de mise en relation</strong> pour
+        votre demande de famille d'accueil SKEMA.
+      </p>
+
+      <div class="modal-amount-box">
+        <span class="modal-amount-label" id="modal-amount-label">Frais de mise en relation</span>
+        <span class="modal-amount-value" id="modal-amount-value">80 €</span>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="modal-btn-cancel" id="modal-btn-cancel">Annuler</button>
+        <button type="button" class="modal-btn-confirm" id="modal-btn-confirm">Confirmer le paiement</button>
+      </div>
+
+      <p class="modal-security-note">🔒 Paiement sécurisé · Aucune carte bancaire requise pour cette démonstration</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0;">
+        <p class="footer-copyright">© 2025 SKEMA Housing — At Home Worldwide · 5 Quai Marcel Dassault, 92150 Suresnes</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/formulaire.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = window.SKEMA_DATA?.CURRENT_USER;
+      const avatarEl = document.getElementById('user-avatar-header');
+      if (user && avatarEl) {
+        avatarEl.innerHTML = `
+          <div class="user-avatar-circle" style="background:linear-gradient(135deg, ${user.avatarColor}, ${user.avatarColor}cc);">
+            ${user.initials}
+          </div>
+          <div class="user-avatar-header-info">
+            <span class="user-avatar-header-name">${user.firstname}</span>
+            <span class="user-avatar-header-program">${user.program} · ${user.year}</span>
+          </div>
+        `;
+      }
+
+      Formulaire.init('famille');
+
+      // ===== GESTION UPLOAD VIDÉO =====
+      const videoInput = document.getElementById('presentationVideo');
+      const videoZone = document.getElementById('video-upload-zone');
+      const videoPreview = document.getElementById('video-preview');
+      const videoPlayer = document.getElementById('video-preview-player');
+      const videoFilename = document.getElementById('video-preview-filename');
+      const videoSize = document.getElementById('video-preview-size');
+      const videoSuccess = document.getElementById('video-success');
+      const btnReplace = document.getElementById('video-btn-replace');
+      const btnDelete = document.getElementById('video-btn-delete');
+
+      function formatSize(bytes) {
+        if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(0) + ' Ko';
+        return (bytes / (1024 * 1024)).toFixed(1) + ' Mo';
+      }
+
+      function handleFile(file) {
+        if (!file) return;
+
+        // Vérifier le type
+        if (!file.type.startsWith('video/')) {
+          alert('Merci de sélectionner un fichier vidéo (MP4, MOV ou WEBM).');
+          return;
+        }
+
+        // Vérifier la taille (100 Mo max)
+        if (file.size > 100 * 1024 * 1024) {
+          alert('La vidéo est trop volumineuse. Maximum : 100 Mo.');
+          return;
+        }
+
+        // Créer un URL local pour la lecture
+        const url = URL.createObjectURL(file);
+        videoPlayer.src = url;
+        videoFilename.textContent = file.name;
+        videoSize.textContent = formatSize(file.size);
+
+        // Afficher l'aperçu + message succès
+        videoPreview.classList.add('is-visible');
+        videoSuccess.classList.add('is-visible');
+        videoZone.style.display = 'none';
+
+        // Stocker dans formData
+        if (window.Formulaire) {
+          window.Formulaire.formData.presentationVideo = {
+            name: file.name,
+            size: file.size,
+            type: file.type
+          };
+        }
+      }
+
+      // Sélection via input
+      videoInput?.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        handleFile(file);
+      });
+
+      // Drag & drop
+      videoZone?.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        videoZone.classList.add('is-dragover');
+      });
+
+      videoZone?.addEventListener('dragleave', () => {
+        videoZone.classList.remove('is-dragover');
+      });
+
+      videoZone?.addEventListener('drop', (e) => {
+        e.preventDefault();
+        videoZone.classList.remove('is-dragover');
+        const file = e.dataTransfer.files[0];
+        if (file) {
+          videoInput.files = e.dataTransfer.files;
+          handleFile(file);
+        }
+      });
+
+      // Bouton "Remplacer"
+      btnReplace?.addEventListener('click', () => {
+        videoInput.click();
+      });
+
+      // Bouton "Supprimer"
+      btnDelete?.addEventListener('click', () => {
+        videoInput.value = '';
+        videoPlayer.src = '';
+        videoPreview.classList.remove('is-visible');
+        videoSuccess.classList.remove('is-visible');
+        videoZone.style.display = 'block';
+
+        if (window.Formulaire?.formData) {
+          delete window.Formulaire.formData.presentationVideo;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

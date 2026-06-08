@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation - SKEMA Housing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-mark">SH</div>
+        <div class="header-logo-text">
+          <strong>SKEMA Housing</strong>
+          <span>At Home Worldwide</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="index.html" class="main-nav-link">Accueil</a></li>
+          <li><a href="residences.html" class="main-nav-link">Logements</a></li>
+          <li><a href="familles.html" class="main-nav-link">Familles d'accueil</a></li>
+          <li><a href="temoignages.html" class="main-nav-link">Témoignages</a></li>
+          <li><a href="equipe.html" class="main-nav-link">Notre équipe</a></li>
+          <li><a href="faq.html" class="main-nav-link">FAQ</a></li>
+        </ul>
+        <div class="user-avatar-header" id="user-avatar-header"></div>
+        <button class="menu-toggle"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================
+         BLOC PRINCIPAL : tout visible sans scroll
+         ============================================ -->
+    <section class="confirm-page">
+      <div class="container">
+
+        <div class="confirm-container">
+
+          <!-- Icône succès animée -->
+          <div class="confirm-icon">✓</div>
+
+          <h1 class="confirm-title">Votre dossier est en route !</h1>
+          <p class="confirm-subtitle">
+            Merci pour votre confiance. Vous recevrez nos propositions personnalisées
+            <strong>sous 48 heures</strong> directement par email.
+          </p>
+
+          <!-- Numéro de dossier -->
+          <div class="confirm-box">
+            <p class="confirm-number">Votre numéro de dossier</p>
+            <div class="confirm-number-value" id="dossier-number">SKH-2025-0000</div>
+          </div>
+
+          <!-- Bandeau social proof compact -->
+          <div class="confirm-social-proof">
+            <strong>32 étudiants</strong> comme vous ont soumis leur dossier cette semaine.
+            <strong>97%</strong> ont reçu au moins 2 propositions adaptées dans les 48 heures.
+          </div>
+
+          <!-- Actions -->
+          <div class="confirm-actions">
+            <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
+            <a href="faq.html" class="btn btn-ghost">Consulter la FAQ</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION SCROLL : Prochaines étapes
+         (cercles numérotés 1-2-3-4 design)
+         ============================================ -->
+    <section class="confirm-timeline-section section-beige">
+      <div class="container">
+        <h2>Prochaines étapes</h2>
+        <p class="timeline-subtitle">Voici comment va se dérouler la suite de votre dossier</p>
+
+        <ul class="confirm-timeline">
+
+          <li class="confirm-timeline-item">
+            <div class="confirm-timeline-number">1</div>
+            <div class="confirm-timeline-content">
+              <strong>Sous 1 heure</strong>
+              <span>Email de confirmation envoyé à votre adresse SKEMA avec le récapitulatif de votre dossier.</span>
+            </div>
+          </li>
+
+          <li class="confirm-timeline-item">
+            <div class="confirm-timeline-number">2</div>
+            <div class="confirm-timeline-content">
+              <strong>Sous 48 heures</strong>
+              <span>Réception de 2 à 3 propositions personnalisées par email, sélectionnées selon vos critères.</span>
+            </div>
+          </li>
+
+          <li class="confirm-timeline-item">
+            <div class="confirm-timeline-number">3</div>
+            <div class="confirm-timeline-content">
+              <strong>Sur RDV avec vous</strong>
+              <span>Organisation des visites physiques ou virtuelles avec notre équipe et les partenaires.</span>
+            </div>
+          </li>
+
+          <li class="confirm-timeline-item">
+            <div class="confirm-timeline-number">4</div>
+            <div class="confirm-timeline-content">
+              <strong>Signature en ligne</strong>
+              <span>Réservation et entrée dans les lieux à votre date d'arrivée. Bienvenue chez SKEMA !</span>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0;">
+        <p class="footer-copyright">© 2025 SKEMA Housing — At Home Worldwide · 5 Quai Marcel Dassault, 92150 Suresnes</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Avatar user
+    const user = window.SKEMA_DATA?.CURRENT_USER;
+    const avatarEl = document.getElementById('user-avatar-header');
+    if (user && avatarEl) {
+      avatarEl.innerHTML = `
+        <div class="user-avatar-circle" style="background:linear-gradient(135deg, ${user.avatarColor}, ${user.avatarColor}cc);">
+          ${user.initials}
+        </div>
+        <div class="user-avatar-header-info">
+          <span class="user-avatar-header-name">${user.firstname}</span>
+          <span class="user-avatar-header-program">${user.program} · ${user.year}</span>
+        </div>
+      `;
+    }
+
+    // Numéro de dossier
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let number = urlParams.get('n');
+
+      if (!number) {
+        const last = sessionStorage.getItem('skema-last-submission');
+        if (last) {
+          try {
+            number = JSON.parse(last).number;
+          } catch (e) {}
+        }
+      }
+
+      if (!number) {
+        const year = new Date().getFullYear();
+        const random = Math.floor(Math.random() * 9000 + 1000);
+        number = `SKH-${year}-${random}`;
+      }
+
+      const el = document.getElementById('dossier-number');
+      if (el) el.textContent = number;
+    })();
+  </script>
+</body>
+</html>

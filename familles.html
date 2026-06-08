@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Familles : Immersion culturelle - SKEMA Housing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-mark">SH</div>
+        <div class="header-logo-text">
+          <strong>SKEMA Housing</strong>
+          <span>At Home Worldwide</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="index.html" class="main-nav-link">Accueil</a></li>
+          <li><a href="residences.html" class="main-nav-link">Logements</a></li>
+          <li><a href="familles.html" class="main-nav-link active">Familles d'accueil</a></li>
+          <li><a href="temoignages.html" class="main-nav-link">Témoignages</a></li>
+          <li><a href="equipe.html" class="main-nav-link">Notre équipe</a></li>
+          <li><a href="faq.html" class="main-nav-link">FAQ</a></li>
+        </ul>
+        <div class="user-avatar-header" id="user-avatar-header"></div>
+        <button class="menu-toggle"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Accueil</a>
+        <span class="separator">›</span>
+        <span class="current">Familles d'accueil</span>
+      </div>
+    </div>
+
+    <section class="product-hero">
+      <div class="container">
+        <div class="product-hero-inner">
+          <div class="product-hero-content">
+            <h1 class="product-hero-title">
+              <span>Familles :</span>
+              <span class="product-hero-title-accent">Immersion culturelle</span>
+            </h1>
+            <p>
+              Rejoignez une famille française vérifiée autour du campus.
+              Idéal pour les étudiants internationaux ou ceux qui veulent dépasser le simple logement.
+            </p>
+            <a href="formulaire-famille.html" class="btn btn-primary btn-lg">
+              Trouver ma famille d'accueil
+            </a>
+          </div>
+
+          <div class="product-hero-image">
+            <img src="assets/images/campus/campus-grand-paris.jpg" alt="Campus SKEMA Grand Paris">
+            <div class="product-hero-image-label">
+              <div class="product-hero-image-label-eyebrow">Votre campus</div>
+              <div class="product-hero-image-label-title">Campus Grand Paris</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding: 2rem 0;">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 1.5rem;">
+          <h2 class="section-title">Nos familles les mieux notées</h2>
+          <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
+            6 familles vérifiées autour du campus.
+          </p>
+          <!-- Note pédagogique : pas de dossier individuel par famille -->
+          <p style="font-size: var(--fs-sm); color: var(--gray-600); margin-top: var(--space-sm); max-width: 700px; margin-left: auto; margin-right: auto;">
+            Les profils détaillés des familles sont communiqués <strong>après validation de votre dossier</strong>, dans le respect de leur vie privée. Vous recevrez 2 à 3 propositions compatibles sous 48h.
+          </p>
+        </div>
+
+        <div class="listing-filters">
+          <div class="listing-count">
+            <strong id="families-count">6 familles vérifiées</strong>
+          </div>
+          <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;align-items:center;">
+            <div class="listing-sort">
+              <label for="filter-zone">Trajet :</label>
+              <select id="filter-zone">
+                <option value="all">Toutes les zones</option>
+                <option value="zone-1">0-15 min</option>
+                <option value="zone-2">15-30 min</option>
+              </select>
+            </div>
+            <div class="listing-sort">
+              <label for="sort-families">Trier :</label>
+              <select id="sort-families">
+                <option value="rating">Meilleures notes</option>
+                <option value="transport">Plus proche</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="listing-grid" id="families-grid"></div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <div class="container">
+        <div class="cta-final-box">
+          <div class="cta-final-content">
+            <div class="cta-final-text-wrap">
+              <h2 class="cta-final-title">Trouvez votre famille d'accueil</h2>
+              <p class="cta-final-text">Sélection personnalisée sous 48h.</p>
+            </div>
+            <div class="cta-final-actions">
+              <a href="formulaire-famille.html" class="btn btn-dark">Démarrer mon dossier</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="header-logo-mark">SH</div>
+            <strong>SKEMA Housing</strong>
+          </div>
+          <p class="footer-tagline">"At Home Worldwide"</p>
+          <p class="footer-description">La plateforme officielle de logement étudiant SKEMA.</p>
+          <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.5);margin-top:var(--space-sm);">
+            Campus Paris<br>5 Quai Marcel Dassault, 92150 Suresnes
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <div class="footer-links">
+            <a href="residences.html">Logements résidence</a>
+            <a href="familles.html">Familles d'accueil</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Aide</h4>
+          <div class="footer-links">
+            <a href="faq.html">FAQ</a>
+            <a href="temoignages.html">Témoignages</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">À propos</h4>
+          <div class="footer-links">
+            <a href="apropos.html">Notre mission</a>
+            <a href="equipe.html">Notre équipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 SKEMA Housing. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const user = window.SKEMA_DATA?.CURRENT_USER;
+    const avatarEl = document.getElementById('user-avatar-header');
+    if (user && avatarEl) {
+      avatarEl.innerHTML = `
+        <div class="user-avatar-circle" style="background:linear-gradient(135deg, ${user.avatarColor}, ${user.avatarColor}cc);">
+          ${user.initials}
+        </div>
+        <div class="user-avatar-header-info">
+          <span class="user-avatar-header-name">${user.firstname}</span>
+          <span class="user-avatar-header-program">${user.program} · ${user.year}</span>
+        </div>
+      `;
+    }
+
+    function renderRating(rating) {
+      const fullStars = Math.floor(rating);
+      const hasHalf = rating % 1 >= 0.5;
+      let stars = '★'.repeat(fullStars);
+      if (hasHalf) stars += '☆';
+      return stars.padEnd(5, '☆');
+    }
+
+    // Icône cadenas pour signaler "profil confidentiel" (SVG inline)
+    const lockIcon = `
+      <svg class="product-card-info-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+    `;
+
+    function renderFamilyCard(item) {
+      const badges = (item.badges || []).map(b => {
+        let cls = 'badge-success';
+        if (b.includes('certifié')) cls = 'badge-warning';
+        return `<span class="badge ${cls}">${b}</span>`;
+      }).join('');
+
+      const allFeatures = [...(item.features || []), ...(item.languages || []).slice(0, 2)].slice(0, 4);
+      const features = allFeatures.map(f =>
+        `<span class="product-card-feature">${f}</span>`
+      ).join('');
+
+      const placeText = item.available > 1
+        ? `Plus que ${item.available} places disponibles`
+        : `Plus que ${item.available} place disponible`;
+
+      return `
+        <article class="product-card">
+          <div class="product-card-image">
+            <img src="${item.image}" alt="${item.name}" loading="lazy">
+            <div class="product-card-badges">${badges}</div>
+            <button class="product-card-favorite" aria-label="Favoris">♡</button>
+            <div class="product-card-rating-floating">
+              <div class="product-card-rating-floating-value">${item.rating}</div>
+              <div style="display:flex;flex-direction:column;">
+                <span class="product-card-rating-floating-stars">${renderRating(item.rating)}</span>
+                <span class="product-card-rating-floating-count">${item.reviewCount} avis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card-body">
+
+            <div class="product-card-section">
+              <p class="product-card-operator">${item.type}</p>
+              <h3 class="product-card-title">${item.name}</h3>
+              <p class="product-card-location">
+                <img src="assets/images/residences/location.jpg" alt="" class="product-card-icon-img">
+                <span>${item.location}</span>
+              </p>
+              <p class="product-card-transport">
+                <img src="assets/images/residences/commute.png" alt="" class="product-card-icon-img">
+                <strong>${item.transportTime} min</strong>
+                <span class="product-card-transport-mode">· ${item.transportMode}</span>
+              </p>
+            </div>
+
+            <div class="product-card-section">
+              <p class="product-card-description">${item.description}</p>
+              <div class="product-card-features">${features}</div>
+              <p class="product-card-availability">${placeText}</p>
+            </div>
+
+            <div class="product-card-section">
+              <span class="product-card-info-note">
+                ${lockIcon}
+                <span>Profil détaillé après votre dossier</span>
+              </span>
+            </div>
+
+          </div>
+        </article>
+      `;
+    }
+
+    function renderFamilies(sortBy = 'rating', zone = 'all') {
+      const grid = document.getElementById('families-grid');
+      const countEl = document.getElementById('families-count');
+      if (!grid) return;
+
+      let items = window.SKEMA_DATA.FAMILIES;
+
+      if (zone !== 'all') {
+        const maxMinutes = { 'zone-1': 15, 'zone-2': 30 }[zone];
+        if (maxMinutes) items = items.filter(item => item.transportTime <= maxMinutes);
+      }
+
+      if (sortBy === 'rating') items.sort((a, b) => b.rating - a.rating);
+      else if (sortBy === 'transport') items.sort((a, b) => a.transportTime - b.transportTime);
+
+      if (countEl) {
+        const label = items.length > 1 ? 'familles vérifiées' : 'famille vérifiée';
+        countEl.textContent = `${items.length} ${label}`;
+      }
+
+      grid.innerHTML = items.length > 0
+        ? items.map(renderFamilyCard).join('')
+        : `<p style="text-align:center;padding:3rem;color:var(--gray-600);grid-column:1/-1;">Aucune famille.</p>`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFamilies('rating', 'all');
+      document.getElementById('sort-families')?.addEventListener('change', () => {
+        renderFamilies(
+          document.getElementById('sort-families').value,
+          document.getElementById('filter-zone').value
+        );
+      });
+      document.getElementById('filter-zone')?.addEventListener('change', () => {
+        renderFamilies(
+          document.getElementById('sort-families').value,
+          document.getElementById('filter-zone').value
+        );
+      });
+    });
+  </script>
+</body>
+</html>

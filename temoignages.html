@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages d'étudiants - SKEMA Housing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-mark">SH</div>
+        <div class="header-logo-text">
+          <strong>SKEMA Housing</strong>
+          <span>At Home Worldwide</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="index.html" class="main-nav-link">Accueil</a></li>
+          <li><a href="residences.html" class="main-nav-link">Logements</a></li>
+          <li><a href="familles.html" class="main-nav-link">Familles d'accueil</a></li>
+          <li><a href="temoignages.html" class="main-nav-link active">Témoignages</a></li>
+          <li><a href="equipe.html" class="main-nav-link">Notre équipe</a></li>
+          <li><a href="faq.html" class="main-nav-link">FAQ</a></li>
+        </ul>
+        <div class="user-avatar-header" id="user-avatar-header"></div>
+        <button class="menu-toggle"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Accueil</a>
+        <span class="separator">›</span>
+        <span class="current">Témoignages</span>
+      </div>
+    </div>
+
+    <!-- HERO TÉMOIGNAGES (compact) -->
+    <section class="testimonials-page-hero">
+      <div class="container">
+        <span class="section-eyebrow">Ils nous ont fait confiance</span>
+        <h1>Témoignages d'étudiants</h1>
+        <p>
+          Découvrez les expériences d'étudiants SKEMA qui ont trouvé leur logement grâce à notre plateforme.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTRE (sans icônes) -->
+    <section style="padding: 0 0 1rem;">
+      <div class="container">
+        <div class="testimonials-filter">
+          <label for="filter-product">Filtrer par :</label>
+          <select id="filter-product">
+            <option value="all">Tous les services</option>
+            <option value="residence">Logements résidence</option>
+            <option value="family">Familles d'accueil</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRILLE TÉMOIGNAGES -->
+    <section class="section" style="padding: 1rem 0 2rem;">
+      <div class="container">
+        <div class="testimonials-grid" id="testimonials-grid"></div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL (réduit) -->
+    <section class="cta-final">
+      <div class="container">
+        <div class="cta-final-box">
+          <div class="cta-final-content">
+            <div class="cta-final-text-wrap">
+              <h2 class="cta-final-title">Vivez la même expérience</h2>
+              <p class="cta-final-text">Rejoignez les étudiants SKEMA qui ont trouvé leur logement idéal.</p>
+            </div>
+            <div class="cta-final-actions">
+              <a href="formulaire-residence.html" class="btn btn-dark">Démarrer mon dossier</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="header-logo-mark">SH</div>
+            <strong>SKEMA Housing</strong>
+          </div>
+          <p class="footer-tagline">"At Home Worldwide"</p>
+          <p class="footer-description">La plateforme officielle de logement étudiant SKEMA.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <div class="footer-links">
+            <a href="residences.html">Logements résidence</a>
+            <a href="familles.html">Familles d'accueil</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Aide</h4>
+          <div class="footer-links">
+            <a href="faq.html">FAQ</a>
+            <a href="temoignages.html">Témoignages</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">À propos</h4>
+          <div class="footer-links">
+            <a href="apropos.html">Notre mission</a>
+            <a href="equipe.html">Notre équipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 SKEMA Housing. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const user = window.SKEMA_DATA?.CURRENT_USER;
+    const avatarEl = document.getElementById('user-avatar-header');
+    if (user && avatarEl) {
+      avatarEl.innerHTML = `
+        <div class="user-avatar-circle" style="background:linear-gradient(135deg, ${user.avatarColor}, ${user.avatarColor}cc);">
+          ${user.initials}
+        </div>
+        <div class="user-avatar-header-info">
+          <span class="user-avatar-header-name">${user.firstname}</span>
+          <span class="user-avatar-header-program">${user.program} · ${user.year}</span>
+        </div>
+      `;
+    }
+
+    const EXTRA_TESTIMONIALS = [
+      { name: 'Emma Schneider', program: 'PGE Master 1', campus: 'Paris', photo: 'ES', color: '#e20074', rating: 5, duration: '4 jours', product: 'residence', quote: "Le studio que j'ai eu est mieux que ce que j'imaginais. Quartier sûr, à 15 min du campus à pied." },
+      { name: 'Carlos Mendoza', program: 'MSc Finance', campus: 'Paris', photo: 'CM', color: '#6d1f80', rating: 5, duration: '1 semaine', product: 'residence', quote: "Service exceptionnel. La garantie locative SKEMA m'a permis de réserver sans garant français." },
+      { name: 'Aïcha Diallo', program: 'Global BBA', campus: 'Paris', photo: 'AD', color: '#ec7404', rating: 5, duration: '5 jours', product: 'family', quote: "La famille m'a accueillie comme une fille. Mon régime halal a été respecté à 100%." },
+      { name: 'Tom Andersen', program: 'Exchange Student', campus: 'Paris', photo: 'TA', color: '#00a5c4', rating: 5, duration: '3 jours', product: 'residence', quote: "Coming from Denmark, I was worried about finding housing. SKEMA Housing made everything seamless." },
+      { name: 'Léa Bonnefoy', program: 'MS Marketing', campus: 'Paris', photo: 'LB', color: '#371253', rating: 4, duration: '2 semaines', product: 'residence', quote: "Très bonne plateforme, propositions de qualité et adaptées à mon budget." },
+      { name: 'Adriana Silva', program: 'MSc Digital', campus: 'Paris', photo: 'AS', color: '#bf0030', rating: 5, duration: '6 jours', product: 'family', quote: "J'ai choisi la famille d'accueil car je voulais vraiment apprendre le français. Mission accomplie !" }
+    ];
+
+    function renderTestimonial(t) {
+      const stars = '★'.repeat(t.rating) + '☆'.repeat(5 - t.rating);
+      const color = t.color || '#bf0030';
+      const productLabel = t.product === 'residence' ? 'Logement' : 'Famille';
+
+      return `
+        <div class="testimonial-card" data-product="${t.product}">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-sm);">
+            <div class="rating">
+              <span class="rating-stars">${stars}</span>
+            </div>
+            <span class="badge badge-success" style="font-size:9px;">${productLabel}</span>
+          </div>
+          <p class="testimonial-quote">${t.quote}</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg, ${color}, ${color}cc);">${t.photo}</div>
+            <div class="testimonial-info">
+              <span class="testimonial-name">${t.name}</span>
+              <span class="testimonial-role">${t.program} — ${t.campus}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderTestimonials(filter = 'all') {
+      const grid = document.getElementById('testimonials-grid');
+      if (!grid) return;
+
+      const base = (window.SKEMA_DATA?.TESTIMONIALS || []).map(t => ({
+        ...t,
+        color: t.product === 'residence' ? '#bf0030' : '#00a5c4'
+      }));
+
+      let all = [...base, ...EXTRA_TESTIMONIALS];
+
+      if (filter !== 'all') {
+        all = all.filter(t => t.product === filter);
+      }
+
+      grid.innerHTML = all.map(renderTestimonial).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderTestimonials('all');
+
+      const filterSelect = document.getElementById('filter-product');
+      if (filterSelect) {
+        filterSelect.addEventListener('change', (e) => {
+          renderTestimonials(e.target.value);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

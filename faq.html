@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - SKEMA Housing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-mark">SH</div>
+        <div class="header-logo-text">
+          <strong>SKEMA Housing</strong>
+          <span>At Home Worldwide</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="index.html" class="main-nav-link">Accueil</a></li>
+          <li><a href="residences.html" class="main-nav-link">Logements</a></li>
+          <li><a href="familles.html" class="main-nav-link">Familles d'accueil</a></li>
+          <li><a href="temoignages.html" class="main-nav-link">Témoignages</a></li>
+          <li><a href="equipe.html" class="main-nav-link">Notre équipe</a></li>
+          <li><a href="faq.html" class="main-nav-link active">FAQ</a></li>
+        </ul>
+        <button class="lang-switcher">
+          <span class="lang-active">FR</span>
+          <span class="lang-separator">|</span>
+          <span class="lang-inactive">EN</span>
+        </button>
+        <a href="formulaire-residence.html" class="btn btn-primary btn-sm">Démarrer mon dossier</a>
+        <button class="menu-toggle"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Accueil</a>
+        <span class="separator">›</span>
+        <span class="current">FAQ</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="text-center" style="max-width:700px;margin:0 auto;">
+          <span class="section-eyebrow">Vos questions, nos réponses</span>
+          <h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:var(--fw-bold);margin-bottom:var(--space-md);">
+            Foire aux questions
+          </h1>
+          <p style="font-size:var(--fs-md);color:var(--gray-700);">
+            Toutes les réponses pour démarrer sereinement votre recherche de logement avec SKEMA Housing.
+          </p>
+
+          <!-- Barre de recherche -->
+          <div style="margin-top: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+            <input
+              type="text"
+              id="faq-search"
+              class="form-input"
+              placeholder="🔍 Rechercher une question..."
+              style="border-radius: var(--radius-full); padding-left: 1.5rem;"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ CONTENT -->
+    <section class="section">
+      <div class="container container-narrow">
+
+        <div id="faq-container">
+          <!-- Catégories générées par JS -->
+        </div>
+
+        <div id="faq-empty" style="display:none; text-align:center; padding: 3rem;">
+          <p style="font-size:var(--fs-md);color:var(--gray-600);">
+            🔍 Aucune question ne correspond à votre recherche.
+          </p>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-top:1rem;">
+            <a href="#" style="color:var(--skema-rouge-fonce);">Contactez-nous directement</a> pour obtenir une réponse personnalisée.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BLOC CONTACT -->
+    <section class="section section-beige">
+      <div class="container container-narrow">
+        <div class="text-center">
+          <span class="section-eyebrow">Pas trouvé votre réponse ?</span>
+          <h2 class="section-title">Notre équipe est là pour vous</h2>
+          <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
+            Contactez directement votre ambassadeur SKEMA Housing pour une réponse personnalisée sous 24h.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem;">
+            <a href="equipe.html" class="btn btn-primary">Voir notre équipe</a>
+            <a href="mailto:contact@skema-housing.fr" class="btn btn-ghost">📧 contact@skema-housing.fr</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="header-logo-mark">SH</div>
+            <strong>SKEMA Housing</strong>
+          </div>
+          <p class="footer-tagline">"At Home Worldwide"</p>
+          <p class="footer-description">La plateforme officielle de logement étudiant SKEMA.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <div class="footer-links">
+            <a href="residences.html">Logements résidence</a>
+            <a href="familles.html">Familles d'accueil</a>
+            <a href="formulaire-residence.html">Démarrer un dossier</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Aide</h4>
+          <div class="footer-links">
+            <a href="faq.html">FAQ</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">À propos</h4>
+          <div class="footer-links">
+            <a href="apropos.html">Notre mission</a>
+            <a href="equipe.html">Notre équipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 SKEMA Housing. Tous droits réservés.</p>
+        <div class="footer-social">
+          <a href="#">in</a><a href="#">📷</a><a href="#">♪</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function renderFAQ(filter = '') {
+      const container = document.getElementById('faq-container');
+      const empty = document.getElementById('faq-empty');
+      if (!container) return;
+
+      const faq = window.SKEMA_DATA?.FAQ || [];
+      const lower = filter.toLowerCase().trim();
+      let html = '';
+      let totalShown = 0;
+
+      faq.forEach(category => {
+        const filtered = category.questions.filter(item => {
+          if (!lower) return true;
+          return item.q.toLowerCase().includes(lower) || item.a.toLowerCase().includes(lower);
+        });
+
+        if (filtered.length > 0) {
+          totalShown += filtered.length;
+          html += `
+            <div class="faq-category">
+              <h2 class="faq-category-title">${category.category}</h2>
+              ${filtered.map((item, idx) => `
+                <div class="faq-item" data-faq-idx="${idx}">
+                  <button class="faq-question" type="button">
+                    <span>${item.q}</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div class="faq-answer-inner">${item.a}</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+      });
+
+      container.innerHTML = html;
+      empty.style.display = totalShown === 0 ? 'block' : 'none';
+
+      // Bind les ouvertures/fermetures
+      container.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          item.classList.toggle('is-open');
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFAQ();
+
+      const search = document.getElementById('faq-search');
+      if (search) {
+        let timeout;
+        search.addEventListener('input', (e) => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => renderFAQ(e.target.value), 200);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
